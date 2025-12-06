@@ -5,7 +5,7 @@
 # This is free software, licensed under the GPL License.
 # See /LICENSE for more information.
 #
-# https://github.com/Erope/openwrt_nezha/
+# https://github.com/Erope/openwrt_korami/
 # Description: Build Nezha using GitHub Actions
 #
 
@@ -59,7 +59,7 @@ jobs:
         cd openwrt
         git checkout $REPO_CHECKOUT
         make distclean
-        echo 'src-git nezha https://github.com/Erope/openwrt_nezha' >> feeds.conf.default
+        echo 'src-git korami https://github.com/Erope/openwrt_korami' >> feeds.conf.default
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
@@ -89,14 +89,14 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j2 toolchain/install
-        make -j2 package/luci-app-nezha/compile V=99
-        make -j2 package/openwrt-nezha/compile V=99
+        make -j2 package/luci-app-korami/compile V=99
+        make -j2 package/openwrt-korami/compile V=99
         mv -f $GITHUB_WORKSPACE/.github/.config_x86 .config
         make -j2 toolchain/install
-        make -j2 package/openwrt-nezha/compile V=99
+        make -j2 package/openwrt-korami/compile V=99
         mv -f $GITHUB_WORKSPACE/.github/.config_arm64 .config
         make -j2 toolchain/install
-        make -j2 package/openwrt-nezha/compile V=99
+        make -j2 package/openwrt-korami/compile V=99
         echo "::set-output name=status::success"
 
     - name: Upload bin directory
@@ -110,7 +110,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(curl -m 10 -sL "https://api.github.com/repos/nezhahq/agent/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
+        echo "::set-output name=release_tag::$(curl -m 10 -sL "https://api.github.com/repos/koramihq/agent/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
         touch release.txt
         echo "::set-output name=status::success"
 
@@ -123,6 +123,6 @@ jobs:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: |
-          openwrt/bin/packages/x86_64/nezha/*
-          openwrt/bin/packages/aarch64_armv8-a/nezha/*
-          openwrt/bin/packages/i386_pentium4/nezha/*
+          openwrt/bin/packages/x86_64/korami/*
+          openwrt/bin/packages/aarch64_armv8-a/korami/*
+          openwrt/bin/packages/i386_pentium4/korami/*

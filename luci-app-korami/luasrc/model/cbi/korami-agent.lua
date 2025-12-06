@@ -8,13 +8,13 @@ THIS IS FREE SOFTWARE, LICENSED UNDER GPLv3
 
 ]]--
 
-m = Map("nezha-agent")
-m.title	= translate("nezha-agent")
+m = Map("korami-agent")
+m.title	= translate("korami-agent")
 m.description = translate("Nezha Agent For OpenWRT")
 
-m:section(SimpleSection).template  = "nezha-agent/nezha-agent_status"
+m:section(SimpleSection).template  = "korami-agent/korami-agent_status"
 
-s = m:section(TypedSection, "nezha-agent")
+s = m:section(TypedSection, "korami-agent")
 s.addremove = false
 s.anonymous = true
 

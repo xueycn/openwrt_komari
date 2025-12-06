@@ -323,7 +323,7 @@ CONFIG_FEED_packages=y
 CONFIG_FEED_luci=y
 CONFIG_FEED_routing=y
 CONFIG_FEED_telephony=y
-CONFIG_FEED_nezha=y
+CONFIG_FEED_korami=y
 
 #
 # Base system
@@ -2833,7 +2833,7 @@ CONFIG_PACKAGE_libuuid=y
 # CONFIG_PACKAGE_luci-app-mjpg-streamer is not set
 # CONFIG_PACKAGE_luci-app-mmc-over-gpio is not set
 # CONFIG_PACKAGE_luci-app-mwan3 is not set
-CONFIG_PACKAGE_luci-app-nezha-agent=m
+CONFIG_PACKAGE_luci-app-korami-agent=m
 # CONFIG_PACKAGE_luci-app-nlbwmon is not set
 # CONFIG_PACKAGE_luci-app-noddos is not set
 # CONFIG_PACKAGE_luci-app-ntpc is not set
@@ -3690,7 +3690,7 @@ CONFIG_PACKAGE_iptables=y
 # CONFIG_PACKAGE_netcat is not set
 # CONFIG_PACKAGE_netdiscover is not set
 # CONFIG_PACKAGE_netperf is not set
-CONFIG_PACKAGE_nezha-agent=m
+CONFIG_PACKAGE_korami-agent=m
 # CONFIG_PACKAGE_nlbwmon is not set
 # CONFIG_PACKAGE_noddos is not set
 # CONFIG_PACKAGE_noping is not set

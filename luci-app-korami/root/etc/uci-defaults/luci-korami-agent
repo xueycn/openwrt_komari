@@ -1,0 +1,11 @@
+#!/bin/sh
+
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@korami-agent[-1]
+	add ucitrack korami-agent
+	set ucitrack.@korami-agent[-1].init=korami-agent
+	commit ucitrack
+EOF
+
+rm -f /tmp/luci-indexcache
+exit 0

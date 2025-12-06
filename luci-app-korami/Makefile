@@ -1,5 +1,5 @@
 #
-# <https://github.com/Erope/openwrt_nezha/>
+# <https://github.com/Erope/openwrt_korami/>
 # 
 # Copyright (C) 2021 zPonds <admin@shinenet.cn>
 # Copyright (C) 2020 KFERMercer <KFER.Mercer@gmail.com>
@@ -10,13 +10,13 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-nezha-agent
-LUCI_TITLE:=LuCI support for nezha agent
-LUCI_DEPENDS:=+nezha-agent
+PKG_NAME:=luci-app-korami-agent
+LUCI_TITLE:=LuCI support for korami agent
+LUCI_DEPENDS:=+korami-agent
 LUCI_PKGARCH:=all
 PKG_VERSION:=3.0
 PKG_RELEASE:=1
-PKG_MAINTAINER:=<https://github.com/Erope/openwrt_nezha/>
+PKG_MAINTAINER:=<https://github.com/Erope/openwrt_korami/>
 
 include $(TOPDIR)/feeds/luci/luci.mk
 

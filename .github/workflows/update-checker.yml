@@ -5,14 +5,14 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-# https://github.com/Erope/openwrt_nezha/
+# https://github.com/Erope/openwrt_korami/
 # Description: Build Nezha using GitHub Actions
 #
 
 name: Update Checker
 
 env:
-  REPO_URL: https://github.com/nezhahq/agent
+  REPO_URL: https://github.com/koramihq/agent
 
 on:
   workflow_dispatch:
@@ -28,7 +28,7 @@ jobs:
     - name: Get Version
       id: getVer
       run: |
-        echo "::set-output name=Version::$(curl -m 10 -sL "https://api.github.com/repos/nezhahq/agent/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
+        echo "::set-output name=Version::$(curl -m 10 -sL "https://api.github.com/repos/koramihq/agent/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
     
     - name: Compare Version
       id: cacheVer

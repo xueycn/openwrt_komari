@@ -4,19 +4,19 @@ USE_PROCD=1
 START=90
 STOP=10
 
-enabled="$(uci get nezha-agent.config.enabled)"
-tls="$(uci get nezha-agent.config.tls)"
-host="$(uci get nezha-agent.config.host)"
-secret="$(uci get nezha-agent.config.secret)"
+enabled="$(uci get korami-agent.config.enabled)"
+tls="$(uci get korami-agent.config.tls)"
+host="$(uci get korami-agent.config.host)"
+secret="$(uci get korami-agent.config.secret)"
 
 start_service() {
         [ "$enabled" == "1" ] || return
         procd_open_instance
         if [ "$tls" == "1" ]
         then
-                procd_set_param command /usr/bin/nezha-agent -s "${host}" -p "${secret}" -d --tls
+                procd_set_param command /usr/bin/korami-agent -s "${host}" -p "${secret}" -d --tls
         else
-                procd_set_param command /usr/bin/nezha-agent -s "${host}" -p "${secret}" -d
+                procd_set_param command /usr/bin/korami-agent -s "${host}" -p "${secret}" -d
         fi
         procd_set_param respawn
         [ -e /proc/sys/kernel/core_pattern ] && {
@@ -26,7 +26,7 @@ start_service() {
 }
 
 service_triggers() {
-        procd_add_reload_trigger "nezha-agent"
+        procd_add_reload_trigger "korami-agent"
 }
 
 reload_service() {
