@@ -9,7 +9,7 @@
 # Description: Build Korami using GitHub Actions
 #
 
-name: Build NeZha
+name: Build Komari
 
 on:
   repository_dispatch:
