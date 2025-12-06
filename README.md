@@ -1,6 +1,6 @@
 # openwrt_korami
 
-哪吒监控 For OpenWRT
+Korami For OpenWRT
 
 **暂时仅支持lua版本**
 
