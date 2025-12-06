@@ -4,7 +4,7 @@ function index()
 	if not nixio.fs.access("/etc/config/komari-agent") then
 		return
 	end
-	entry({"admin", "services", "komari-agent"}, cbi("komari-agent"), _("Korami Agent"), 300).dependent = true
+	entry({"admin", "services", "komari-agent"}, cbi("komari-agent"), _("Komari Agent"), 300).dependent = true
 	entry({"admin","services","komari-agent","status"},call("act_status")).leaf=true
 end
 

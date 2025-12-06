@@ -10,7 +10,7 @@ THIS IS FREE SOFTWARE, LICENSED UNDER GPLv3
 
 m = Map("komari-agent")
 m.title	= translate("komari-agent")
-m.description = translate("Korami Agent For OpenWRT")
+m.description = translate("Komari Agent For OpenWRT")
 
 m:section(SimpleSection).template  = "komari-agent/komari-agent_status"
 
