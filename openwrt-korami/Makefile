@@ -12,7 +12,7 @@ define Package/$(PKG_NAME)
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Nezha Agent is the client of the Nezha panel
-	URL:=https://github.com/naiba/korami/
+	URL:=https://github.com/komari-monitor/korami/
 endef
 
 
