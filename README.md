@@ -34,7 +34,7 @@ Korami For OpenWRT
 
 部分代码来自P3TERX <https://p3terx.com> 和 KFERMercer <KFER.Mercer@gmail.com>
 
-源项目为: <https://github.com/naiba/korami>
+源项目为: <https://github.com/komari-monitor/korami>
 
 非常感谢！
 
