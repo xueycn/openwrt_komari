@@ -1,5 +1,5 @@
 #
-# <https://github.com/xueycn/openwrt_korami/>
+# <https://github.com/xueycn/openwrt_komari/>
 # 
 # Copyright (C) 2021 zPonds <admin@shinenet.cn>
 # Copyright (C) 2020 KFERMercer <KFER.Mercer@gmail.com>
@@ -10,13 +10,13 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-korami-agent
-LUCI_TITLE:=LuCI support for korami agent
-LUCI_DEPENDS:=+korami-agent
+PKG_NAME:=luci-app-komari-agent
+LUCI_TITLE:=LuCI support for komari agent
+LUCI_DEPENDS:=+komari-agent
 LUCI_PKGARCH:=all
 PKG_VERSION:=3.0
 PKG_RELEASE:=1
-PKG_MAINTAINER:=<https://github.com/xueycn/openwrt_korami/>
+PKG_MAINTAINER:=<https://github.com/xueycn/openwrt_komari/>
 
 include $(TOPDIR)/feeds/luci/luci.mk
 

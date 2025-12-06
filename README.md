@@ -1,4 +1,4 @@
-# openwrt_korami
+# openwrt_komari
 
 Korami For OpenWRT
 
@@ -16,11 +16,11 @@ Korami For OpenWRT
 
 ### 编译
 
-将 `src-git korami https://github.com/xueycn/openwrt_korami` 添加至 `feeds.conf.default` 后执行
+将 `src-git komari https://github.com/xueycn/openwrt_komari` 添加至 `feeds.conf.default` 后执行
 
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
-找到luci-app-korami 选中后编译即可
+找到luci-app-komari 选中后编译即可
 
 
 
@@ -34,7 +34,7 @@ Korami For OpenWRT
 
 部分代码来自P3TERX <https://p3terx.com> 和 KFERMercer <KFER.Mercer@gmail.com>
 
-源项目为: <https://github.com/komari-monitor/korami>
+源项目为: <https://github.com/komari-monitor/komari>
 
 非常感谢！
 

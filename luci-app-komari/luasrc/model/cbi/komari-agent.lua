@@ -8,13 +8,13 @@ THIS IS FREE SOFTWARE, LICENSED UNDER GPLv3
 
 ]]--
 
-m = Map("korami-agent")
-m.title	= translate("korami-agent")
+m = Map("komari-agent")
+m.title	= translate("komari-agent")
 m.description = translate("Korami Agent For OpenWRT")
 
-m:section(SimpleSection).template  = "korami-agent/korami-agent_status"
+m:section(SimpleSection).template  = "komari-agent/komari-agent_status"
 
-s = m:section(TypedSection, "korami-agent")
+s = m:section(TypedSection, "komari-agent")
 s.addremove = false
 s.anonymous = true
 

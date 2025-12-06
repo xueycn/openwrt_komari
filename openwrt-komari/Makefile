@@ -2,7 +2,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=korami-agent
+PKG_NAME:=komari-agent
 PKG_VERSION:=1
 PKG_RELEASE:=1
 
@@ -12,7 +12,7 @@ define Package/$(PKG_NAME)
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Korami Agent is the client of the Korami panel
-	URL:=https://github.com/komari-monitor/korami/
+	URL:=https://github.com/komari-monitor/komari/
 endef
 
 
@@ -52,9 +52,9 @@ ifeq ($(ARCH),aarch64)
 endif
 
 
-PKG_SOURCE:=korami-agent_linux_$(PKG_ARCH_KORAMI-AGENT).zip
+PKG_SOURCE:=komari-agent_linux_$(PKG_ARCH_KORAMI-AGENT).zip
 
-PKG_SOURCE_URL:=https://github.com/koramihq/agent/releases/latest/download/
+PKG_SOURCE_URL:=https://github.com/komarihq/agent/releases/latest/download/
 
 TAR_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/$(PKG_NAME)-TAR
 
@@ -73,7 +73,7 @@ endef
 
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(TAR_DIR)/korami-agent $(1)/usr/bin/$(PKG_NAME)
+	$(INSTALL_BIN) $(TAR_DIR)/komari-agent $(1)/usr/bin/$(PKG_NAME)
 	chmod 755 $(1)/usr/bin/$(PKG_NAME)
 endef
 
