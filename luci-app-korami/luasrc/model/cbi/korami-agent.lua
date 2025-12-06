@@ -10,7 +10,7 @@ THIS IS FREE SOFTWARE, LICENSED UNDER GPLv3
 
 m = Map("korami-agent")
 m.title	= translate("korami-agent")
-m.description = translate("Nezha Agent For OpenWRT")
+m.description = translate("Korami Agent For OpenWRT")
 
 m:section(SimpleSection).template  = "korami-agent/korami-agent_status"
 

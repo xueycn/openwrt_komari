@@ -4,7 +4,7 @@ function index()
 	if not nixio.fs.access("/etc/config/korami-agent") then
 		return
 	end
-	entry({"admin", "services", "korami-agent"}, cbi("korami-agent"), _("Nezha Agent"), 300).dependent = true
+	entry({"admin", "services", "korami-agent"}, cbi("korami-agent"), _("Korami Agent"), 300).dependent = true
 	entry({"admin","services","korami-agent","status"},call("act_status")).leaf=true
 end
 

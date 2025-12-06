@@ -6,7 +6,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/Erope/openwrt_korami/
-# Description: Build Nezha using GitHub Actions
+# Description: Build Korami using GitHub Actions
 #
 
 name: Build NeZha

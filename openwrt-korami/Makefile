@@ -11,48 +11,48 @@ include $(INCLUDE_DIR)/package.mk
 define Package/$(PKG_NAME)
 	SECTION:=net
 	CATEGORY:=Network
-	TITLE:=Nezha Agent is the client of the Nezha panel
+	TITLE:=Korami Agent is the client of the Korami panel
 	URL:=https://github.com/komari-monitor/korami/
 endef
 
 
 define Package/$(PKG_NAME)/description
-Nezha Agent is the client of the Nezha panel
+Korami Agent is the client of the Korami panel
 endef
 
 # 禁止OpenWrt对二进制文件进行strip
 STRIP:=true
 
 ifeq ($(ARCH),i386)
-	PKG_ARCH_NEZHA-AGENT:=386
+	PKG_ARCH_KORAMI-AGENT:=386
 endif
 
 ifeq ($(ARCH),x86_64)
-	PKG_ARCH_NEZHA-AGENT:=amd64
+	PKG_ARCH_KORAMI-AGENT:=amd64
 endif
 
 ifeq ($(ARCH),mipsel)
-	PKG_ARCH_NEZHA-AGENT:=mipsle
+	PKG_ARCH_KORAMI-AGENT:=mipsle
 endif
 
 ifeq ($(ARCH),mips)
-	PKG_ARCH_NEZHA-AGENT:=mips
+	PKG_ARCH_KORAMI-AGENT:=mips
 endif
 
 ifeq ($(ARCH),arm)
-	PKG_ARCH_NEZHA-AGENT:=arm
+	PKG_ARCH_KORAMI-AGENT:=arm
 endif
 
 ifeq ($(ARCH),arm64)
-	PKG_ARCH_NEZHA-AGENT:=arm64
+	PKG_ARCH_KORAMI-AGENT:=arm64
 endif
 
 ifeq ($(ARCH),aarch64)
-	PKG_ARCH_NEZHA-AGENT:=arm64
+	PKG_ARCH_KORAMI-AGENT:=arm64
 endif
 
 
-PKG_SOURCE:=korami-agent_linux_$(PKG_ARCH_NEZHA-AGENT).zip
+PKG_SOURCE:=korami-agent_linux_$(PKG_ARCH_KORAMI-AGENT).zip
 
 PKG_SOURCE_URL:=https://github.com/koramihq/agent/releases/latest/download/
 
