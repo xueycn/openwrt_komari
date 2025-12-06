@@ -16,7 +16,7 @@ Korami For OpenWRT
 
 ### 编译
 
-将 `src-git korami https://github.com/Erope/openwrt_korami` 添加至 `feeds.conf.default` 后执行
+将 `src-git korami https://github.com/xueycn/openwrt_korami` 添加至 `feeds.conf.default` 后执行
 
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
