@@ -14,9 +14,9 @@ start_service() {
         procd_open_instance
         if [ "$tls" == "1" ]
         then
-                procd_set_param command /usr/bin/korami-agent -s "${host}" -p "${secret}" -d --tls
+                procd_set_param command /usr/bin/korami-agent -e "${host}" -t "${secret}" --disable-auto-update --tls
         else
-                procd_set_param command /usr/bin/korami-agent -s "${host}" -p "${secret}" -d
+                procd_set_param command /usr/bin/korami-agent -e "${host}" -t "${secret}" --disable-auto-update
         fi
         procd_set_param respawn
         [ -e /proc/sys/kernel/core_pattern ] && {
